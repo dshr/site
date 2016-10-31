@@ -32,6 +32,24 @@ module.exports = function(grunt) {
       }
     },
 
+    browserSync: {
+			dev: {
+				bsFiles: {
+					src : [
+						'assets/styles/*.css',
+						'*.html',
+						'*.js'
+					]
+				},
+				options: {
+					watchTask: true,
+					server: {
+						baseDir: "./"
+					}
+				}
+			}
+		},
+
 		watch: {
 			dev: {
 				files: ['assets/styles/*.styl'],
@@ -42,12 +60,12 @@ module.exports = function(grunt) {
 			}
 		}
 
-	});
+	})
 
-	grunt.loadNpmTasks('grunt-postcss');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-stylus');
+	grunt.loadNpmTasks('grunt-postcss')
+	grunt.loadNpmTasks('grunt-contrib-watch')
+	grunt.loadNpmTasks('grunt-contrib-stylus')
+	grunt.loadNpmTasks('grunt-browser-sync')
 
-	grunt.registerTask('default', ['stylus:dev', 'postcss:main', 'watch:dev']);
-
-};
+	grunt.registerTask('default', ['browserSync', 'stylus:dev', 'postcss:main', 'watch:dev'])
+}
