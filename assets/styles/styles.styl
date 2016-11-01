@@ -1,155 +1,118 @@
+link-underline = rgba(0, 0, 0, 1)
+link-underline-hover = rgba(0, 0, 0, 0.15)
 main = #131313
-bg-1 = #fefefe
-bg-2 = #f0f0f0
 
 *
+
 	box-sizing: border-box
-	-webkit-font-smoothing: subpixel-antialiased
 
 html, body
-	height: 100%
-	font-family: 'Dosis', sans-serif;
+
+	font-family: 'Work Sans', sans-serif;
 	font-size: 20px
+	height: 100%
 	@media screen and (min-width: 768px)
+
 		font-size: 30px
 
 body
-	margin: 0
-	line-height: 140%
+
+	background-color: white
 	color: main
-	background-color: bg-1
+	line-height: 1.4rem
+	margin: 0
+	padding: 0.5rem 1rem 0
+	@media screen and (min-width: 900px)
+		padding: 0.5rem 4rem 0
 
 a
-	color: main
-	&:link, &:visited, &:focus, &:hover
-		color: main
-	&.none
-		text-decoration: none
 
-.icon
-	width: 1.5rem
-	display: inline-block
-	margin: 0 0.3em
+	background: linear-gradient(transparent 90%, link-underline 0)
+	color: main
+	outline: 0;
+	text-decoration: none
+
+	&:focus, &:hover
+
+		background: linear-gradient(transparent 40%, link-underline-hover 0)
+
+h1, h2
+
+	margin: 0 0 1rem
+	line-height: 2rem
+
+h3
+
+	margin-bottom: 0
+
+h4
+
+	margin: 0
+
+li
+
+	display: block
 	&.big
-		width: 2.2rem
-	&.email
-	&.twitter
-		padding-bottom: 0.1em
-	&:hover
-		opacity: 0.7
+
+		margin: 0 0 1.5rem
+
+section
+
+	border-top: 0.3rem solid main
+	padding-top: 0.6rem
+	position: relative
+
+ul
+
+	padding: 0
+	margin: 0
+
+.full-height
+
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	min-height: 100%
+	padding-bottom: 1rem
+
+.links
+
+	font-size: 0.8rem
 
 .smiley
+
 	font-family: fantasy
 	font-size: 0.8em
 
 .heart
+
 	font-family: fantasy
 	font-size: 1.2em
 	line-height: 0.8em
 	vertical-align: middle
 
-section
-	padding: 30px 20px
-	&:nth-child(odd)
-		background-color: bg-2
-	@media screen and (min-width: 900px)
-		padding: 40px 80px
-
-.full-height
-	min-height: 100%
-	position: relative
-
-.center
-	position: absolute
-	top: 0
-	bottom: 0
-	left: 0
-	right: 0
-	margin: auto
-	text-align: center
-
 .home
-	position: relative
-	font-size: 133%
 
-.me
-	width: 70%
-	height: auto
-	max-width: 200px
-	border-radius: 100%
-	padding: 10px
-	@media screen and (orientation: landscape)
-		float: left
-		height: 100%
-		width: auto
-		max-width: none
-
-.hello
-	height: 445px
-	width: 90%
-	@media screen and (orientation: landscape)
-		height: 210px
-		width: 90%
-	@media screen and (min-width: 768px) and (orientation: landscape)
-		height: 310px
-		width: 90%
-	@media screen and (min-width: 920px)
-		height: 270px
-		width: 920px
-
-.about
-	text-align: left
-	height: 350px
-	padding: 0 20px
-	@media screen and (orientation: landscape)
-		height: 260px
-	@media screen and (min-width: 280px) and (orientation: landscape)
-		height: 230px
-	@media screen and (min-width: 768px) and (orientation: landscape)
-		height: 310px
-		padding: 0 80px
-
-
-ul
-	padding: 0
-	margin: 0
-
-li
-	display: block
-	margin: 0 0 10px
-	&.big
-		margin: 0 0 30px
+	font-size: 1.33rem
 
 .dates
-	font-size: 80%
-	font-style: italic
 
-.third
+	font-size: 0.8rem
+	font-style: italic
+	margin-top: 0
+
+.half
+
+	ul
+		padding-bottom: 1.4rem
 	@media screen and (min-width: 920px)
-		text-align: center
 		float: left
-		width: 33%
-		h3
-			margin-top: 0
+		width: 50%
 
 .clearfix
+
 	clear: both
 
-.final
-	position: relative
-	height: 100%
-	background: linear-gradient(bg-2, bg-1)
+.no-wrap
 
-.large
-	font-size: 2rem
-	line-height: 2rem
-	font-weight: bold
-
-.cya
-	height: 250px
-	padding: 0 10px
-	@media screen and (min-width: 768px)
-		height: 370px
-
-.back-to-top
-	margin-top: 20px
+	white-space: nowrap
