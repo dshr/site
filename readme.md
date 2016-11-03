@@ -1,3 +1,3 @@
 # My website
 
-Check it out at <des.codes>
+Check it out at <https://des.codes/>
