@@ -19,7 +19,7 @@ body
 
 	background-color: white
 	color: main
-	line-height: 1.4rem
+	line-height: 1.36
 	margin: 0
 	padding: 0.5rem 1rem 0
 	@media screen and (min-width: 768px)
@@ -47,11 +47,13 @@ h1, h4
 
 h2
 
+	font-size: 1.36rem
 	margin: 0 0 1rem
 	line-height: 2rem
 
 h3
 
+	font-size: 1.17rem
 	margin-bottom: 0
 
 li
@@ -64,7 +66,7 @@ li
 section
 
 	border-top: 0.3rem solid main
-	padding-top: 0.6rem
+	padding-top: 0.2rem
 	position: relative
 
 ul
@@ -82,7 +84,7 @@ ul
 
 .links
 
-	font-size: 0.8rem
+	font-size: 1em
 
 .heart
 
@@ -91,23 +93,15 @@ ul
 	line-height: 0.8rem
 	vertical-align: middle
 
-.home
+.no-mobile
 
-	font-size: 1.3rem
-	line-height: 1.5rem
+	display: none
+	@media screen and (min-width: 650px)
 
-	@media screen and (orientation: portrait) and (min-width: 375px), screen and (orientation: landscape) and (min-width: 902px)
-
-		font-size: 1.8rem
-		line-height: 2rem
-		h1
-
-			line-height: 2.8rem
+		display: inline-block
 
 .dates
 
-	font-size: 0.8rem
-	font-style: italic
 	margin-top: 0
 
 .half
