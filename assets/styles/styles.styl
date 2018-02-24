@@ -1,5 +1,5 @@
 link-underline = rgba(0, 0, 0, 1)
-link-underline-hover = rgba(0, 0, 0, 0.15)
+link-underline-hover = rgba(0, 0, 0, 0.125)
 main = #131313
 
 *
@@ -19,6 +19,7 @@ body
 
 	background-color: white
 	color: main
+	letter-spacing: 0.1px
 	line-height: 1.36
 	margin: 0
 	padding: 0.5rem 1rem 0
@@ -32,14 +33,28 @@ body
 
 a
 
-	background: linear-gradient(transparent 90%, link-underline 0)
 	color: main
+	display: inline-block
 	outline: 0;
+	position: relative
 	text-decoration: none
 
-	&:focus, &:hover
+	&:after
 
-		background: linear-gradient(transparent 40%, link-underline-hover 0)
+		background-color: link-underline
+		bottom: 0em
+		content: " "
+		height: 0.1em
+		left: -0.1em
+		position: absolute
+		right: -0.1em
+		transition: height 0.5s, background-color 1s
+
+	&:focus:after, &:hover:after
+
+		background-color: link-underline-hover
+		height: 1.3em
+		transition: height 0.5s, background-color 0.25s
 
 h1, h4
 
