@@ -22,7 +22,7 @@ module.exports = function(grunt) {
       options: {
       	map: true,
         processors: [
-          require('autoprefixer-core')({ browers: 'last 2 versions' }),
+          require('autoprefixer')({ browers: 'last 2 versions' }),
         ]
       },
       main: {
