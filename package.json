@@ -1,12 +1,15 @@
 {
   "name": "dshr.github.io",
   "version": "1.0.0",
-  "dependencies": {
-    "autoprefixer": "latest",
-    "grunt": "latest",
-    "grunt-browser-sync": "latest",
-    "grunt-contrib-stylus": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-postcss": "latest"
+  "devDependencies": {
+    "autoprefixer": "^10.2.1",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "precss": "^4.0.0",
+    "sugarss": "^3.0.3"
+  },
+  "scripts": {
+    "dev": "postcss assets/styles/styles.sss --no-map -o assets/styles/styles.css -w"
   }
 }
